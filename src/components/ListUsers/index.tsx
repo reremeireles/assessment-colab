@@ -3,6 +3,7 @@ import { UserContext } from "../../context/UserContext";
 import { Container, ContentTitle } from "./styles";
 import { User } from "../User";
 import { getUsers } from "../../services/getUsers";
+import { FilterUserByGender } from "../FilterbyGender";
 
 export function ListUsers() {
   const { users, setUsers } = useContext(UserContext);
@@ -17,6 +18,8 @@ export function ListUsers() {
       <ContentTitle>
         <h1>Team Members</h1>
       </ContentTitle>
+
+      <FilterUserByGender />
 
       <ul>
         <li>
