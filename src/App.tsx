@@ -1,4 +1,5 @@
 import { Header } from "./components/Header";
+import { ListUsers } from "./components/ListUsers";
 import { UserProvider } from "./context/UserContext";
 import { GlobalStyle } from "./styles/global";
 
@@ -8,6 +9,7 @@ function App() {
     <UserProvider>
       <GlobalStyle />
       <Header />
+      <ListUsers />
     </UserProvider>
   )
 }
