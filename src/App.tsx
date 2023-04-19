@@ -1,9 +1,12 @@
+import { UserProvider } from "./context/UserContext";
 import { GlobalStyle } from "./styles/global";
 
 function App() {
 
   return (
-    <GlobalStyle />
+    <UserProvider>
+      <GlobalStyle />
+    </UserProvider>
   )
 }
 
