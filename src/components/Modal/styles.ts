@@ -46,12 +46,13 @@ export const ContentModal = styled.div`
   .title {
     grid-area: title;
     margin: 0.5rem 0;
-    color: var(--grey-200);
+    color: var(--grey-100);
   }
 
   .profile {
     grid-area: profile;
     margin: 0.5rem 0;
+    align-items: center;
     display: grid;
     grid-template-columns: 80px 1fr;
     grid-template-areas:
@@ -66,9 +67,18 @@ export const ContentModal = styled.div`
 
     .user {
       grid-area: user;
-      padding: 0.5rem 0 0 0.5rem;
-      font-size: 0.875rem;
+      padding-left: 0.5rem;
+      align-self: flex-end;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--grey-100);
+    }
+
+    .location {
+      grid-area: location;
+      padding: 0 0 0 0.5rem;
       color: var(--grey-400);
+
     }
   }
 
