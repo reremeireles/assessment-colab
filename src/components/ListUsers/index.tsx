@@ -1,10 +1,16 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
 import { Container, ContentTitle } from "./styles";
 import { User } from "../User";
+import { getUsers } from "../../services/getUsers";
 
 export function ListUsers() {
-  const {users, setUsers} = useContext(UserContext);
+  const { users, setUsers } = useContext(UserContext);
+
+   useEffect(() => {
+    getUsers({
+    }).then(users => setUsers(users));
+  }, []);
 
   return (
     <Container>
