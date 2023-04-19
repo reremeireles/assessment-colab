@@ -74,9 +74,9 @@ export const getUsers = async (query: GetUserQuery) => {
   let queryString = '';
 
   if (query.limit) {
-    queryString+= `results=${query.limit}`
+    queryString+= `?results=${query.limit}`
   } else {
-    queryString += `results=?${MAX_NUMBER_OF_FETCH_USER_DEFAULT}`
+    queryString += `?results=${MAX_NUMBER_OF_FETCH_USER_DEFAULT}`
   }
 
   if (query.gender) {
