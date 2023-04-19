@@ -4,14 +4,18 @@ import { Container, ContentTitle } from "./styles";
 import { User } from "../User";
 import { getUsers } from "../../services/getUsers";
 import { FilterUserByGender } from "../FilterbyGender";
+import { LoadMoreButton } from "../LoadMoreButton";
 
 export function ListUsers() {
-  const { users, setUsers } = useContext(UserContext);
+  const { users, setUsers, genderFilter } = useContext(UserContext);
 
-   useEffect(() => {
-    getUsers({
-    }).then(users => setUsers(users));
-  }, []);
+const loadMoreUsers = async () => {
+    const newUsers = await getUsers({
+      limit: 5,
+      gender: genderFilter
+    });
+    setUsers([...users, ...newUsers]);
+  };
 
   return (
     <Container>
@@ -28,6 +32,7 @@ export function ListUsers() {
           })}
         </li>
       </ul>
+      <LoadMoreButton onClick={loadMoreUsers} />
     </Container>
   );
 };
