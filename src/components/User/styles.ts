@@ -18,8 +18,6 @@ export const Container = styled.div`
     color: var(--grey-400);
   }
 
-  @media screen and (max-width: 1200px) {}
-
   @media screen and (max-width: 760px) {
     display: grid;
     grid-template-columns: 100%;
