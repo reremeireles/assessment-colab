@@ -12,7 +12,7 @@ Desenvolvimento de uma aplicação com uma listagem de usuários consumindo a AP
 - botão para carregar mais usuários
   - caso algum filtro esteja selecionado, os usuários serão carregados com base no filtro, caso não tenha nenhum filtro selecionado, os usuários serão carregados de forma geral
 
-Acesse o deploy do projeto:
+Acesse o deploy do projeto: https://colab-test-reremeireles.vercel.app/
 
 ## 💻 Tecnologias e Bibliotecas
 
