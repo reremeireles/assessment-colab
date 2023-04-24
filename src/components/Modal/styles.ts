@@ -20,7 +20,8 @@ export const ContainerModal = styled.div`
   padding: 1rem;
 
   @media screen and (max-width: 760px) {
-    margin: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
   }
 `;
 
@@ -107,6 +108,25 @@ export const ContentModal = styled.div`
       p {
         text-align: right;
         padding: 0.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .content {
+      margin: 1rem 0;
+      font-size: 0.85rem;
+
+      .subtitle {
+        p {
+          padding: 0.5rem 0;
+        }
+      }
+
+      .info {
+        p {
+          padding: 0.5rem 0;
+        }
       }
     }
   }
